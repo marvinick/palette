@@ -10,11 +10,8 @@
             <dt><%= employee.description %></dt>
           </dl>
         </td>
-
         <td class="list_actions">
-          <%= link_to 'Show', employee %></td>
-          <%= link_to 'Edit', edit_employee_path(employee) %>
-          <%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Show', employee %><br/>
         </td>
       </tr>
     <% end %>
