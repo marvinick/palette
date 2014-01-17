@@ -1,5 +1,7 @@
 Palette::Application.routes.draw do
 
+  resources :posts
+
   resources :schedules
 
   resources :employees
