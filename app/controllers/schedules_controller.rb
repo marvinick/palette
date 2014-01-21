@@ -5,6 +5,7 @@ class SchedulesController < ApplicationController
   # GET /schedules.json
   def index
     @schedules = Schedule.all
+    @employees = Employee.all
   end
 
   # GET /schedules/1
