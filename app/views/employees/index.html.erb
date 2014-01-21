@@ -40,13 +40,13 @@
                     </dl>
                   </td>
                   <td class="list_actions">
-                    <%= button_to 'Show', @employee %><br/>
+                    <%= link_to 'Show', employee %><br/>
                     <%= button_to 'Add to Schedule', @schedule %>
                   </td>
                 </tr>
-                <%= link_to 'New Employee', new_employee_path %>
               <% end %>
             </table>
+            <%= link_to 'New Employee', new_employee_path %>
         </div>
     </div>
 

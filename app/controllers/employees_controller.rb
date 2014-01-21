@@ -10,7 +10,6 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
-
   end
 
   # GET /employees/new
@@ -71,6 +70,5 @@ class EmployeesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
       params.require(:employee).permit(:name, :title, :description)
-      # params.require(:product).permit(:title, :description, :image_url, :price)
     end
 end
