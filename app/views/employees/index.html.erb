@@ -23,40 +23,36 @@
 </head>
 
 <body>
-
   <div class="container">
-
     <div class="row">
-        <div class="col-lg-12">
-            <h1>Chefs</h1>
-            <table>
-              <% @employees.each do |employee| %>
-                <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-                  <td class="list_description">
-                    <dl>
-                      <dt><%= employee.name %></dt>
-                      <dt><%= employee.title %></dt>
-                      <dt><%= employee.description %></dt>
-                    </dl>
-                  </td>
-                  <td class="list_actions">
-                    <%= link_to 'Show', employee %><br/>
-                    <%= button_to 'Add to Schedule', @schedule %>
-                  </td>
-                </tr>
-              <% end %>
-            </table>
-            <%= link_to 'New Employee', new_employee_path %>
-        </div>
+      <div class="col-lg-3">
+          <h1>Chefs</h1>
+          <table>
+            <% @employees.each do |employee| %>
+              <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+                <td class="list_description">
+                  <dl>
+                    <dt><%= employee.name %></dt>
+                    <dt><%= employee.title %></dt>
+                    <dt><%= employee.description %></dt>
+                  </dl>
+                </td>
+                <td class="list_actions">
+                  <%= link_to 'Show', employee %><br/>
+                  <%= button_to 'Add to Schedule', @schedule %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+          <%= link_to 'New Employee', new_employee_path %>
+      </div>
     </div>
-
   </div>
   <!-- /.container -->
 
   <!-- JavaScript -->
   <script src="js/jquery-1.10.2.js"></script>
   <script src="js/bootstrap.js"></script>
-
 </body>
 
 </html>

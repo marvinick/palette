@@ -1,20 +1,23 @@
 <h1>Schedules</h1>
 
 <body>
-<div class="row">
-  <div class="col-md-4">Name</div>
-  <div class="col-md-1">Monday</div>
-  <div class="col-md-1">Tuesday</div>
-  <div class="col-md-1">Wednesday</div>
-  <div class="col-md-1">Thursday</div>
-  <div class="col-md-1">Friday</div>
-  <div class="col-md-1">Saturday</div>
-  <div class="col-md-1">Sunday</div>
-</div>
+  <table>
+    <tr>
+      <div class="row">
+        <div class="col-md-3"><b>Name</b></div>
+        <div class="col-md-1">Monday</div>
+        <div class="col-md-1">Tuesday</div>
+        <div class="col-md-1">Wednesday</div>
+        <div class="col-md-1">Thursday</div>
+        <div class="col-md-1">Friday</div>
+        <div class="col-md-1">Saturday</div>
+        <div class="col-md-1">Sunday</div>
+      </div>
+    </tr>
+  </table>
 
-<table>
-    <% @employees.each do |employee| %>
-      <tr>
+      <% @employees.each do |employee| %>
+      <table>
         <td>
           <dl>
             <dt><%= employee.name %></dt>
@@ -23,10 +26,10 @@
         </td>
         <td class="list_actions">
           <%= link_to 'Show', employee %><br/>
-          <%= link_to 'Destroy', @employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-</table>
+        </td>
+      </table>
+      <% end %>
+
 
 <br>
 </body>

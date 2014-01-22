@@ -21,9 +21,11 @@
 
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><%= link_to 'Schedules', @schedule %></a>
+                    <li>
+                        <%= link_to 'Schedules', @schedule_path %>
                     </li>
-                    <li><a href="#services">Employees</a>
+                    <li>
+                        <%= link_to 'Employees', @employee %>
                     </li>
                     <li><a href="#contact">Requests</a>
                     </li>
