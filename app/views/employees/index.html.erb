@@ -22,14 +22,28 @@
 
 </head>
 
-<body>
+<table class="table">
+    <tr>
+      <div class="col">
+        <div class="col-md-3"></div>
+        <div class="col-md-1">Sunday</div>
+        <div class="col-md-1">Monday</div>
+        <div class="col-md-1">Tuesday</div>
+        <div class="col-md-1">Wednesday</div>
+        <div class="col-md-1">Thursday</div>
+        <div class="col-md-1">Friday</div>
+        <div class="col-md-1">Saturday</div>
+        <div class="col-md-1">Total Shifts</div>
+    </tr>
+  </table>
+
+
   <div class="container">
     <div class="row">
-      <div class="col-lg-3">
-          <h1>Chefs</h1>
-          <table>
+      <div class="col-md-3">
+          <table class="table">
             <% @employees.each do |employee| %>
-              <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+              <tr>
                 <td class="list_description">
                   <dl>
                     <dt><%= employee.name %></dt>
@@ -39,21 +53,30 @@
                 </td>
                 <td class="list_actions">
                   <%= link_to 'Show', employee %><br/>
-                  <%= button_to 'Add to Schedule', @schedule %>
                 </td>
               </tr>
             <% end %>
           </table>
           <%= link_to 'New Employee', new_employee_path %>
       </div>
+      <div class="col-md-1">
+        <tr>
+          <td class="list_description">
+            <dl>
+              <dt>
+                <label>
+                  <input type="checkbox">Brunch
+                </label>
+              </dt>
+            </dl>
+          </td>
+        </tr>
+      </div>
     </div>
   </div>
-  <!-- /.container -->
 
-  <!-- JavaScript -->
   <script src="js/jquery-1.10.2.js"></script>
   <script src="js/bootstrap.js"></script>
-</body>
 
 </html>
 

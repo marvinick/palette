@@ -18,12 +18,10 @@
 
       <% @employees.each do |employee| %>
       <table>
-        <td>
-          <dl>
-            <dt><%= employee.name %></dt>
-            <dt><%= employee.description %></dt>
-          </dl>
-        </td>
+        <div>
+          <div class="col-md-3"><%= employee.name %></div>
+          <td><%= employee.description %></td>
+        </tr>
         <td class="list_actions">
           <%= link_to 'Show', employee %><br/>
         </td>

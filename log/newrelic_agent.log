@@ -210,3 +210,29 @@
 [01/22/14 08:11:47 -0600 mcair.local (793)] INFO : Installing Rails 4 view instrumentation
 [01/22/14 08:11:47 -0600 mcair.local (793)] INFO : Installing Rails4 Error instrumentation
 [01/22/14 08:11:47 -0600 mcair.local (793)] INFO : Finished instrumentation
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Starting the New Relic agent in "development" environment.
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Reading configuration from 
+[01/22/14 20:17:13 -0600 mcair.local (1041)] ERROR : Unable to read configuration file : Is a directory - /Users/marvin8214/Desktop/palette
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Enabling the Request Sampler.
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Environment: development
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Dispatcher: webrick
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Application: development
+[01/22/14 20:17:13 -0600 mcair.local (1041)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Installing ActiveRecord 4 instrumentation
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Installing Net instrumentation
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Installing deferred Rack instrumentation
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Installing Rails 4 Controller instrumentation
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Installing Rails 4 view instrumentation
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Installing Rails4 Error instrumentation
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Finished instrumentation
+[01/22/14 20:17:13 -0600 mcair.local (1041)] INFO : Doing deferred dependency-detection before Rack startup
+[01/22/14 21:18:10 -0600 mcair.local (1041)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/marvin8214/Desktop/palette/app/views/employees/index.html.erb:30: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...er.append=( @schedules.shift[:1] );@output_buffer.safe_appen...
+...                               ^
+/Users/marvin8214/Desktop/palette/app/views/employees/index.html.erb:75: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/marvin8214/Desktop/palette/app/views/employees/index.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+[01/22/14 21:23:52 -0600 mcair.local (1041)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `shift' for nil:NilClass
+[01/22/14 21:24:08 -0600 mcair.local (1041)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `shift' for nil:NilClass
+[01/22/14 23:39:48 -0600 mcair.local (1041)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/marvin8214/Desktop/palette/app/views/employees/index.html.erb:83: syntax error, unexpected keyword_ensure, expecting end-of-input
+[01/22/14 23:40:27 -0600 mcair.local (1041)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/marvin8214/Desktop/palette/app/views/employees/index.html.erb:82: syntax error, unexpected keyword_ensure, expecting end-of-input
