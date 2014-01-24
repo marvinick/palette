@@ -253,3 +253,20 @@
 [01/23/14 21:53:17 -0600 mcair.local (512)] INFO : Installing Rails4 Error instrumentation
 [01/23/14 21:53:17 -0600 mcair.local (512)] INFO : Finished instrumentation
 [01/23/14 21:53:17 -0600 mcair.local (512)] INFO : Doing deferred dependency-detection before Rack startup
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Starting the New Relic agent in "development" environment.
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Reading configuration from 
+[01/24/14 08:19:01 -0600 mcair.local (561)] ERROR : Unable to read configuration file : Is a directory - /Users/marvin8214/Desktop/palette
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Enabling the Request Sampler.
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Environment: development
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Dispatcher: webrick
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Application: development
+[01/24/14 08:19:01 -0600 mcair.local (561)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Installing ActiveRecord 4 instrumentation
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Installing Net instrumentation
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Installing deferred Rack instrumentation
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Installing Rails 4 Controller instrumentation
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Installing Rails 4 view instrumentation
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Installing Rails4 Error instrumentation
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Finished instrumentation
+[01/24/14 08:19:01 -0600 mcair.local (561)] INFO : Doing deferred dependency-detection before Rack startup

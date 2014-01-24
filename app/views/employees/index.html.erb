@@ -1,161 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="en">
+<body>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+      <title>Starter Template for Bootstrap</title>
 
-    <title>Starter Template for Bootstrap</title>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Add custom CSS here -->
-    <style>
-    body {
-        margin-top: 60px;
-    }
-    </style>
-
-</head>
-
-<table class="table">
-    <tr>
-      <div class="col">
-        <div class="col-md-3"></div>
-        <div class="col-md-1">Sunday</div>
-        <div class="col-md-1">Monday</div>
-        <div class="col-md-1">Tuesday</div>
-        <div class="col-md-1">Wednesday</div>
-        <div class="col-md-1">Thursday</div>
-        <div class="col-md-1">Friday</div>
-        <div class="col-md-1">Saturday</div>
-        <div class="col-md-1">Total Shifts</div>
-    </tr>
-  </table>
-
+      <style>
+      body {
+          margin-top: 60px;
+          padding-bottom: 50px;
+      }
+      </style>
+  </head>
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
-          <table class="table">
-            <% @employees.each do |employee| %>
-              <tr>
-                <td class="list_description">
-                  <dl>
-                    <dt><%= employee.name %></dt>
-                    <dt><%= employee.title %></dt>
-                    <dt><%= employee.description %></dt>
-                  </dl>
-                </td>
-                <td class="list_actions">
-                  <%= link_to 'Show', employee %><br/>
-                </td>
-              </tr>
-            <% end %>
-          </table>
-          <%= link_to 'New Employee', new_employee_path %>
-      </div>
-      <div class="col-md-1">
-        <tr>
-          <td class="list_description">
-            <dl>
-              <dt>
-                <label>
-                  <input type="checkbox">Brunch
-                </label>
-              </dt>
-            </dl>
-          </td>
-        </tr>
-      </div>
-      <div class="col-md-1">
-        <tr>
-          <td class="list_description">
-            <dl>
-              <dt>
-                <label>
-                  <input type="checkbox">AM
-                </label>
-              </dt>
-            </dl>
-          </td>
-        </tr>
-      </div>
-      <div class="col-md-1">
-        <tr>
-          <td class="list_description">
-            <dl>
-              <dt>
-                <label>
-                  <input type="checkbox">AM
-                </label>
-              </dt>
-            </dl>
-          </td>
-        </tr>
-      </div>
-      <div class="col-md-1">
-        <tr>
-          <td class="list_description">
-            <dl>
-              <dt>
-                <label>
-                  <input type="checkbox">AM
-                </label>
-              </dt>
-            </dl>
-          </td>
-        </tr>
-      </div>
-      <div class="col-md-1">
-        <tr>
-          <td class="list_description">
-            <dl>
-              <dt>
-                <label>
-                  <input type="checkbox">AM
-                </label>
-              </dt>
-            </dl>
-          </td>
-        </tr>
-      </div>
-      <div class="col-md-1">
-        <tr>
-          <td class="list_description">
-            <dl>
-              <dt>
-                <label>
-                  <input type="checkbox">AM
-                </label>
-              </dt>
-            </dl>
-          </td>
-        </tr>
-      </div>
-      <div class="col-md-1">
-        <tr>
-          <td class="list_description">
-            <dl>
-              <dt>
-                <label>
-                  <input type="checkbox">AM
-                </label>
-              </dt>
-            </dl>
-          </td>
-        </tr>
-      </div>
+      <table class="table">
+        <div class="col-md-3"><dt><h4>Chefs</h4></dt></div>
+        <div class="col-md-1"><dt>Sunday</dt></div>
+        <div class="col-md-1"><dt>Monday</dt></div>
+        <div class="col-md-1"><dt>Tuesday</dt></div>
+        <div class="col-md-1"><dt>Wednesday</dt></div>
+        <div class="col-md-1"><dt>Thursday<dt></div>
+        <div class="col-md-1"><dt>Friday</dt></div>
+        <div class="col-md-1"><dt>Saturday</dt></div>
+        <div class="col-md-1"><dt>Total Shifts</dt></div>
+      </table>
     </div>
+  </div>
+
+
+  <div class="container">
+  <% @employees.each do |employee| %>
+    <div class="row">
+      <tr>
+        <table class="table">
+          <div class="col-md-3">
+            <dt>
+              <button type="button" class="btn btn-primary"><%= link_to employee.name, employee %></button>
+            </dt>
+            <dt><%= employee.title %></dt>
+            <dt><%= employee.description %></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">Brunch</label></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">AM</button></label></dt>
+            <dt><label><input type="checkbox">PM</button></label></dt></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">AM</button></label></dt>
+            <dt><label><input type="checkbox">PM</button></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">AM</button></label></dt>
+            <dt><label><input type="checkbox">PM</button></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">AM</button></label></dt>
+            <dt><label><input type="checkbox">PM</button></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">AM</button></label></dt>
+            <dt><label><input type="checkbox">PM</button></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">AM</button></label></dt>
+            <dt><label><input type="checkbox">PM</button></dt>
+          </div>
+          <div class="col-md-1">
+            <dt></dt>
+            <dt></dt>
+          </div>
+        </table>
+      </tr>
+
+    </div>
+  <% end %>
+    <dt>
+      <button type="button" class="btn btn-warning"><%= link_to 'New Employee', new_employee_path %></button>
+    </dt>
   </div>
 
   <script src="js/jquery-1.10.2.js"></script>
   <script src="js/bootstrap.js"></script>
-
+</body>
 </html>
 
 
