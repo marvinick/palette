@@ -4,7 +4,7 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.all
+    @employees = Employee.order(:title)
     @schedules = Schedule.all
   end
 

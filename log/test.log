@@ -1,0 +1,257 @@
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "shift" varchar(255)) [0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "day" varchar(255), "shift" varchar(255), "created_at" datetime, "updated_at" datetime, "ampm" varchar(255)) [0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140122141147')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140115151522')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140115183554')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140117215237')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140122133827')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "employees"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "employees" ("created_at", "updated_at", "id") VALUES ('2014-01-25 22:06:53', '2014-01-25 22:06:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "employees" ("created_at", "updated_at", "id") VALUES ('2014-01-25 22:06:53', '2014-01-25 22:06:53', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "posts"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at", "id") VALUES ('2014-01-25 22:06:53', '2014-01-25 22:06:53', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "posts" ("created_at", "updated_at", "id") VALUES ('2014-01-25 22:06:53', '2014-01-25 22:06:53', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "schedules"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "schedules" ("created_at", "updated_at", "id") VALUES ('2014-01-25 22:06:53', '2014-01-25 22:06:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "schedules" ("created_at", "updated_at", "id") VALUES ('2014-01-25 22:06:53', '2014-01-25 22:06:53', 298486374)[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+EmployeesControllerTest: test_should_create_employee
+----------------------------------------------------
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "employees"[0m
+Processing by EmployeesController#create as HTML
+  Parameters: {"employee"=>{}}
+Completed 400 Bad Request in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+EmployeesControllerTest: test_should_destroy_employee
+-----------------------------------------------------
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "employees"[0m
+Processing by EmployeesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/employees
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "employees"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+EmployeesControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mEmployee Load (31.8ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "980190962"]]
+  Rendered employees/_form.html.erb (22.7ms)
+Completed 200 OK in 7284ms (Views: 7282.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+EmployeesControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+EmployeesControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (3.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+EmployeesControllerTest: test_should_show_employee
+--------------------------------------------------
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+EmployeesControllerTest: test_should_update_employee
+----------------------------------------------------
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by EmployeesController#update as HTML
+  Parameters: {"employee"=>{}, "id"=>"980190962"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 400 Bad Request in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+PostsControllerTest: test_should_create_post
+--------------------------------------------
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 25 Jan 2014 22:07:01 UTC +00:00], ["updated_at", Sat, 25 Jan 2014 22:07:01 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/980190963
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+PostsControllerTest: test_should_destroy_post
+---------------------------------------------
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+PostsControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "980190962"]]
+  Rendered posts/_form.html.erb (3.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+PostsControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+PostsControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.3ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+PostsControllerTest: test_should_show_post
+------------------------------------------
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+PostsControllerTest: test_should_update_post
+--------------------------------------------
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{}, "id"=>"980190962"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts/980190962
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+SchedulesControllerTest: test_should_create_schedule
+----------------------------------------------------
+  [1m[35mSchedule Load (0.3ms)[0m  SELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "schedules"[0m
+Processing by SchedulesController#create as HTML
+  Parameters: {"schedule"=>{}}
+Completed 400 Bad Request in 1ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+SchedulesControllerTest: test_should_destroy_schedule
+-----------------------------------------------------
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "schedules"[0m
+Processing by SchedulesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "schedules" WHERE "schedules"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/schedules
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "schedules"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+SchedulesControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by SchedulesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", "980190962"]]
+  Rendered schedules/_form.html.erb (3.7ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+SchedulesControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by SchedulesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+SchedulesControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by SchedulesController#new as HTML
+  Rendered schedules/_form.html.erb (2.9ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+SchedulesControllerTest: test_should_show_schedule
+--------------------------------------------------
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by SchedulesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+SchedulesControllerTest: test_should_update_schedule
+----------------------------------------------------
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by SchedulesController#update as HTML
+  Parameters: {"schedule"=>{}, "id"=>"980190962"}
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 400 Bad Request in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
