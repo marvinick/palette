@@ -2,7 +2,7 @@ class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
 
   def index
-    @employees = Employee.order(:name)
+    @employees = Employee.order(:updated_at)
     @schedules = Schedule.all
   end
 
