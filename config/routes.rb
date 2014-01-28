@@ -1,5 +1,7 @@
 Palette::Application.routes.draw do
 
+  resources :line_staffs
+
   resources :drafts
 
   resources :posts

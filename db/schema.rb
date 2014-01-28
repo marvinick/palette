@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125222800) do
+ActiveRecord::Schema.define(version: 20140128040738) do
 
   create_table "drafts", force: true do |t|
     t.datetime "created_at"
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(version: 20140125222800) do
     t.datetime "updated_at"
     t.string   "shift"
   end
+
+  create_table "line_staffs", force: true do |t|
+    t.integer  "employee_id"
+    t.integer  "draft_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "line_staffs", ["draft_id"], name: "index_line_staffs_on_draft_id"
+  add_index "line_staffs", ["employee_id"], name: "index_line_staffs_on_employee_id"
 
   create_table "posts", force: true do |t|
     t.string   "name"

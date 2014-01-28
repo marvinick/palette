@@ -1,0 +1,29 @@
+<h1>Listing line_staffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Draft</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @line_staffs.each do |line_staff| %>
+      <tr>
+        <td><%= line_staff.employee %></td>
+        <td><%= line_staff.draft %></td>
+        <td><%= link_to 'Show', line_staff %></td>
+        <td><%= link_to 'Edit', edit_line_staff_path(line_staff) %></td>
+        <td><%= link_to 'Destroy', line_staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Line staff', new_line_staff_path %>
