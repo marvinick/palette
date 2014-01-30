@@ -74,6 +74,6 @@ class LineStaffsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_staff_params
-      params.require(:line_staff).permit(:employee_id, :draft_id)
+      params.require(:line_staff).permit(:employee_id, :draft_id, :schedule_id)
     end
 end

@@ -403,3 +403,20 @@
 [01/29/14 22:53:04 -0600 mcair.local (5121)] INFO : Installing Rails 4 view instrumentation
 [01/29/14 22:53:04 -0600 mcair.local (5121)] INFO : Installing Rails4 Error instrumentation
 [01/29/14 22:53:04 -0600 mcair.local (5121)] INFO : Finished instrumentation
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Starting the New Relic agent in "development" environment.
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Reading configuration from 
+[01/30/14 16:01:07 -0600 mcair.local (2349)] ERROR : Unable to read configuration file : Is a directory - /Users/marvin8214/Desktop/palette
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Enabling the Request Sampler.
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Environment: development
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Dispatcher: webrick
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Application: development
+[01/30/14 16:01:07 -0600 mcair.local (2349)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Installing ActiveRecord 4 instrumentation
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Installing Net instrumentation
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Installing deferred Rack instrumentation
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Installing Rails 4 Controller instrumentation
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Installing Rails 4 view instrumentation
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Installing Rails4 Error instrumentation
+[01/30/14 16:01:07 -0600 mcair.local (2349)] INFO : Finished instrumentation
+[01/30/14 16:01:08 -0600 mcair.local (2349)] INFO : Doing deferred dependency-detection before Rack startup
