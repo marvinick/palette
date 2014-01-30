@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140128040738) do
+ActiveRecord::Schema.define(version: 20140130045304) do
 
   create_table "drafts", force: true do |t|
     t.datetime "created_at"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140128040738) do
     t.integer  "draft_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "schedule_id"
   end
 
   add_index "line_staffs", ["draft_id"], name: "index_line_staffs_on_draft_id"

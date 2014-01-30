@@ -1,29 +1,142 @@
-<h1>Listing line_staffs</h1>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
 
-<table>
-  <thead>
-    <tr>
-      <th>Employee</th>
-      <th>Draft</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.css" rel="stylesheet">
 
-  <tbody>
-    <% @line_staffs.each do |line_staff| %>
+      <style>
+      body {
+          margin-top: 60px;
+          padding-bottom: 50px;
+      }
+
+      </style>
+  </head>
+
+  <div class="container">
+    <div class="row">
+      <table class="table">
+        <div class="col-md-3">
+          <dt>
+            <h3>Chefs</h3>
+          </dt>
+        </div>
+        <div class="col-md-1">
+          <dt>Sunday</dt>
+          <dt>AM : </dt>
+        </div>
+        <div class="col-md-1">
+          <dt>Monday</dt>
+          <dt>AM : </dt>
+          <dt>PM : </dt>
+        </div>
+        <div class="col-md-1">
+          <dt>Tuesday</dt>
+          <dt>AM : </dt>
+          <dt>PM : </dt>
+        </div>
+        <div class="col-md-1">
+          <dt>Wednesday</dt>
+          <dt>AM : </dt>
+          <dt>PM : </dt>
+        </div>
+        <div class="col-md-1">
+          <dt>Thursday<dt>
+          <dt>AM : </dt>
+          <dt>PM : </dt>
+          </div>
+        <div class="col-md-1">
+          <dt>Friday</dt>
+          <dt>AM : </dt>
+          <dt>PM : </dt>
+        </div>
+        <div class="col-md-1">
+          <dt>Saturday</dt>
+          <dt>AM : </dt>
+          <dt>PM : </dt>
+        </div>
+        <div class="col-md-1"><dt>Total</dt></div>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="container">
+  <% @employees.each do |employee| %>
+    <div class="row">
       <tr>
-        <td><%= line_staff.employee %></td>
-        <td><%= line_staff.draft %></td>
-        <td><%= link_to 'Show', line_staff %></td>
-        <td><%= link_to 'Edit', edit_line_staff_path(line_staff) %></td>
-        <td><%= link_to 'Destroy', line_staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <table class="table">
+          <div class="col-md-3">
+            <dt>
+              <button type="button" class="btn btn-primary"><%= link_to employee.name, employee %></button>
+            </dt>
+            <dt><%= employee.title %></dt>
+            <dt><%= employee.description %></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">
+              <%= button_to "Brunch", line_staffs_path(schedule_id: @schedule) %></label></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">
+              <%= button_to "AM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+            <dt><label><input type="checkbox">
+              <%= button_to "PM", line_staffs_path(schedule_id: @schedule) %></label></dt></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">
+              <%= button_to "AM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+            <dt><label><input type="checkbox">
+              <%= button_to "PM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">
+              <%= button_to "AM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+            <dt><label><input type="checkbox">
+              <%= button_to "PM", line_staffs_path(schedule_id: @schedule) %></label</dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">
+              <%= button_to "AM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+            <dt><label><input type="checkbox">
+              <%= button_to "PM", line_staffs_path(schedule_id: @schedule) %></label</dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">
+              <%= button_to "AM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+            <dt><label><input type="checkbox">
+              <%= button_to "PM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+          </div>
+          <div class="col-md-1">
+            <dt><label><input type="checkbox">
+              <%= button_to "AM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+            <dt><label><input type="checkbox">
+              <%= button_to "PM", line_staffs_path(schedule_id: @schedule) %></label></dt>
+          </div>
+          <div class="col-md-1">
+            <dt></dt>
+            <dt></dt>
+          </div>
+        </table>
       </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+    </div>
+  <% end %>
+    <dt>
+      <button type="button" class="btn btn-warning"><%= link_to 'New Employee', new_employee_path %></button>
+    </dt>
+  </div>
 
-<%= link_to 'New Line staff', new_line_staff_path %>
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>
+
+
+

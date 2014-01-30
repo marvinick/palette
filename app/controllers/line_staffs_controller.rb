@@ -1,9 +1,13 @@
 class LineStaffsController < ApplicationController
+  include CurrentDraft
+  before_action :set_draft, only: [:create]
   before_action :set_line_staff, only: [:show, :edit, :update, :destroy]
 
   # GET /line_staffs
   # GET /line_staffs.json
   def index
+    @employees = Employee.all
+    #@schedules = Schedules.all
     @line_staffs = LineStaff.all
   end
 
@@ -24,11 +28,12 @@ class LineStaffsController < ApplicationController
   # POST /line_staffs
   # POST /line_staffs.json
   def create
-    @line_staff = LineStaff.new(line_staff_params)
+    @schedule = Schedule.find(params[:schedule_id])
+    @line_staff = @draft.line_staffs.build(schedule: schedule)
 
     respond_to do |format|
       if @line_staff.save
-        format.html { redirect_to @line_staff, notice: 'Line staff was successfully created.' }
+        format.html { redirect_to @line_staff.schedule, notice: 'Line staff was successfully created.' }
         format.json { render action: 'show', status: :created, location: @line_staff }
       else
         format.html { render action: 'new' }
