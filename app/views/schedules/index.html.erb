@@ -14,11 +14,12 @@
       body {
           margin-top: 60px;
           padding-bottom: 50px;
+          padding-right: 40px;
+          padding-left: 40;
       }
-
       </style>
   </head>
-
+<div class='well'>
   <div class="container">
     <div class="row">
       <table class="table">
@@ -68,6 +69,7 @@
 
 
   <div class="container">
+
   <% @employees.each do |employee| %>
     <div class="row">
       <tr>
@@ -80,44 +82,31 @@
             <dt><%= employee.description %></dt>
           </div>
           <div class="col-md-1">
-            <dt><label><input type="checkbox">
-              <%= button_to "Brunch" %></label></dt>
+            <dt><label><input type="checkbox">Brunch</label></dt>
           </div>
           <div class="col-md-1">
-            <dt><label><input type="checkbox">
-              <%= button_to "AM" %></label></dt>
-            <dt><label><input type="checkbox">
-              <%= button_to "PM" %></label></dt></dt>
+            <dt><label><input type="checkbox">AM</label></dt>
+            <dt><label><input type="checkbox">PM</label></dt></dt>
           </div>
           <div class="col-md-1">
-            <dt><label><input type="checkbox">
-              <%= button_to "AM" %></label></dt>
-            <dt><label><input type="checkbox">
-              <%= button_to "PM" %></label></dt>
+            <dt><label><input type="checkbox">AM</label></dt>
+            <dt><label><input type="checkbox">PM</label></dt>
           </div>
           <div class="col-md-1">
-            <dt><label><input type="checkbox">
-              <%= button_to "AM" %></label></dt>
-            <dt><label><input type="checkbox">
-              <%= button_to "PM" %></label</dt>
+            <dt><label><input type="checkbox">AM</label></dt>
+            <dt><label><input type="checkbox">PM</label</dt>
           </div>
           <div class="col-md-1">
-            <dt><label><input type="checkbox">
-              <%= button_to "AM" %></label></dt>
-            <dt><label><input type="checkbox">
-              <%= button_to "PM" %></label</dt>
+            <dt><label><input type="checkbox">AM</label></dt>
+            <dt><label><input type="checkbox">PM</label</dt>
           </div>
           <div class="col-md-1">
-            <dt><label><input type="checkbox">
-              <%= button_to "AM" %></label></dt>
-            <dt><label><input type="checkbox">
-              <%= button_to "PM" %></label></dt>
+            <dt><label><input type="checkbox">AM</label></dt>
+            <dt><label><input type="checkbox">PM</label></dt>
           </div>
           <div class="col-md-1">
-            <dt><label><input type="checkbox">
-              <%= button_to "AM" %></label></dt>
-            <dt><label><input type="checkbox">
-              <%= button_to "PM" %></label></dt>
+            <dt><label><input type="checkbox">AM</label></dt>
+            <dt><label><input type="checkbox">PM</label></dt>
           </div>
           <div class="col-md-1">
             <dt></dt>
@@ -127,12 +116,13 @@
       </tr>
 
     </div>
-  <% end %>
+    <% end %>
+
     <dt>
       <button type="button" class="btn btn-warning"><%= link_to 'New Employee', new_employee_path %></button>
     </dt>
   </div>
-
+</div>
   <script src="js/jquery-1.10.2.js"></script>
   <script src="js/bootstrap.js"></script>
 </body>

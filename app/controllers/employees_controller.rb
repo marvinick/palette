@@ -1,19 +1,19 @@
 class EmployeesController < ApplicationController
 
   def index
-    employee = Employee.order(:name)
+    @employees = Employee.order(:updated_at)
   end
 
   def show
-    employee = Employee.find(params[:id])
+    @employee = Employee.find(params[:id])
   end
 
   def new
-    employee = Employee.new
+    @employee = Employee.new
   end
 
   def create
-    employee = Employee.create
+    @employee = Employee.create
   end
 
   def edit
