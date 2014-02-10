@@ -5,6 +5,6 @@ Palette::Application.routes.draw do
   resources :employees
 
   # You can have the root of your site routed with "root"
-  root 'scheduless#index'
+  root 'schedules#index'
 
 end
