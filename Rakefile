@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Palette::Application.load_tasks
+Palette2::Application.load_tasks

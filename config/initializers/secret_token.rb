@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Palette::Application.config.secret_key_base = '88d4b1d140f1644ff555ef415ab6eb835b2e12510b9d33d801d75d3d37c08a14f63d8cd7110cb44801374e8e3eeb61869863d2249d282adc9d2c61695ee1d259'
+Palette2::Application.config.secret_key_base = '72a22f7efdbfe268d707d1448805f65fe7d6ca7688f76657ac90de2959bc1f8789e13a19ba48052fa599f06bb152f161e3e6be30393e3a62212a8a8b91614735'
