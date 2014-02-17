@@ -6,9 +6,13 @@
       <%= f.text_field :name %>
     </div>
     <div class='control-group'>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
     </div>
-    <%= f.submit @employee.new_record? ? "Register" : "Update Profile", class: 'btn btn-success' %>
+    <div class='control-group'>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+    <%= f.submit @employee.new_record? ? "Create Employee" : "Update Profile", class: 'btn btn-success' %>
   <% end %>
 </div>
