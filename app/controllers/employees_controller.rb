@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
 
   def index
-    @employee = Employee.all
+    @employees = Employee.all
   end
 
   def new
@@ -10,6 +10,13 @@ class EmployeesController < ApplicationController
 
   def create
     @employee = Employee.new(employee_params)
+
+    if @employee.save
+      flash[:notice] = "You have added a new employee"
+      redirect_to employees_path
+    else
+      render :new
+    end
   end
 
 
