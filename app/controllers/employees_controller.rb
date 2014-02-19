@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: [:edit, :update, :show]
+  before_action :set_employee, only: [:edit, :update, :show, :destroy]
 
   def index
     @employees = Employee.order(:description)
@@ -36,7 +36,8 @@ class EmployeesController < ApplicationController
   end
 
   def destroy
-
+    @employee = nil
+    redirect_to employees_path
   end
 
   private

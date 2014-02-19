@@ -1,18 +1,2 @@
-<div class='well'>
-  <%= form_for @employee do |f| %>
-
-    <div class='control-group'>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </div>
-    <div class='control-group'>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
-    <div class='control-group'>
-      <%= f.label :description %>
-      <%= f.text_area :description, rows: 6 %>
-    </div>
-    <%= f.submit @employee.new_record? ? "Add" : "Update Profile", class: 'btn btn-success' %>
-  <% end %>
-</div>
+<h3>Add Employee</h3>
+<%= render 'form' %>
