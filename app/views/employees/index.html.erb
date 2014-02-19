@@ -2,6 +2,9 @@
 
 <div class="well">
 <% @employees.each do |employee| %>
-  <li><%= employee.name %></li>
+  <dt>
+    <%= employee.name %>
+    <%= link_to "Show", employee_path(employee) %>
+  </dt>
 <% end %>
 </div>

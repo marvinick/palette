@@ -1,8 +1,14 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:show, :edit, :update]
 
+  def index
+    @schedules = Schedule.all
+  end
+
   def new
+    @employees = Employee.all
     @schedule = Schedule.new
+    @schedules = Schedule.all
   end
 
   def create
@@ -10,7 +16,7 @@ class SchedulesController < ApplicationController
 
     if @schedule.save
       flash[:notice] = "Your new schedule was saved"
-      redirect_to :schedules_path
+      redirect_to new_schedule_path
     else
       render :new
     end
