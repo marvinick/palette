@@ -1,11 +1,12 @@
 <h3>Employees</h3>
 
-<div class="well">
+<div class="row">
 <% @employees.each do |employee| %>
-  <dt>
-    <%= employee.name %>
-    <%= link_to "Show", employee_path(employee) %>
-  </dt>
+  <div class="span1 well">
+    <dt><%= employee.name %></dt>
+    <dt><%= link_to "Show", employee_path(employee) %></dt>
+  </div>
 <% end %>
 </div>
+
 
