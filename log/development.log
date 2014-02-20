@@ -6317,3 +6317,135 @@ Processing by EmployeesController#index as HTML
   Rendered layouts/_navigation.html.erb (0.7ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-20 08:38:08 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (couldn't find file 'jquery-ui'
+  (in /Users/marvin8214/Desktop/palette/app/assets/javascripts/application.js:14)):
+     7:     <meta name="description" content="">
+     8:     <meta name="author" content="">
+     9:     <%= stylesheet_link_tag "application", :media => "all" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:     <%= csrf_meta_tags %>
+    12:     <%= yield(:head) %>
+    13:   </head>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__289033345969196780_70300475272780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-20 08:41:23 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (19.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 220ms (Views: 183.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-20 08:44:09 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-20 08:45:26 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-20 08:45:28 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (37.8ms)
+  Rendered employees/new.html.erb within layouts/application (39.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 48.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-20 08:45:31 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.8ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-20 08:45:37 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-20 08:49:22 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2014-02-20 08:49:24 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEmployee Load (0.7ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered employees/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-20 08:51:44 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 206ms
+
+ActionView::Template::Error ([stdin]:1:10: error: unexpected ;
+jQuery ->;
+         ^
+  (in /Users/marvin8214/Desktop/palette/app/assets/javascripts/employee.js.coffee)):
+     7:     <meta name="description" content="">
+     8:     <meta name="author" content="">
+     9:     <%= stylesheet_link_tag "application", :media => "all" %>
+    10:     <%= javascript_include_tag "application" %>
+    11:     <%= csrf_meta_tags %>
+    12:     <%= yield(:head) %>
+    13:   </head>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__3198266458989358770_70094846736300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.9ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-20 08:52:36 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 211ms (Views: 209.0ms | ActiveRecord: 0.4ms)
