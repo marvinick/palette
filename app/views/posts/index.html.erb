@@ -1,15 +1,24 @@
 <h3>Posts</h3>
 
-<% @posts.each do |post| %>
-  <th>
-    <div class="span5 well">
-      <dt><h4><%= post.title %></h4></dt>
-      <dt><%= post.description %></dt>
-      <dt><small>Created at <%= post.created_at %></small></dt>
-      <br/>
-      <dt><%= link_to "Show", employee_path(@employee) %></dt>
-    </div>
-  </th>
-<% end %>
+<div class="row">
+  <ul id="posts" data-update-url="<%= sort_posts_url %>">
+  <% @posts.each do |post| %>
+  <div class="span2 well">
+    <%= content_tag_for :dt, post do %>
+        <h4><%= post.title %></h4>
+        <%= post.description %>
+        <br/>
+        <small>Created at <%= post.created_at %></small>
+        <br/>
+        <%= link_to "Show", employee_path(@employee) %>
+    <% end %>
+      </div>
+  <% end %>
+  </ul>
+</div>
+
+
+
+
 
 

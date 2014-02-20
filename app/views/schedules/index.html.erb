@@ -1,0 +1,13 @@
+<h3>Shifts</h3>
+
+<div class="row">
+  <ul id="schedules">
+  <% @schedules.each do |schedule| %>
+  <div class="span1 well">
+    <%= content_tag_for :dt, schedule do %>
+      <%= schedule.shift %>
+    <% end %>
+  </div>
+  <% end %>
+  </ul>
+</div>

@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @posts = Post.order("position")
   end
 
   def new
@@ -24,6 +25,10 @@ class PostsController < ApplicationController
   end
 
   def update
+  end
+
+  def sort
+    render nothing: true
   end
 
   private

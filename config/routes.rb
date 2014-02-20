@@ -4,6 +4,7 @@ Palette2::Application.routes.draw do
 
   resources :employees
   resources :schedules
-  resources :posts
-
+  resources :posts do
+    collection { post :sort }
+  end
 end

@@ -15,8 +15,8 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new(schedule_params)
 
     if @schedule.save
-      flash[:notice] = "Your new schedule was saved"
-      redirect_to new_schedule_path
+      flash[:notice] = "You have added a shift"
+      redirect_to schedules_path
     else
       render :new
     end
