@@ -1,2 +1,2 @@
 jQuery ->
-  $('#posts').sortable();
+  $('#posts').sortable(update: -> $.post($(this).data('update-url'), $(this).sortable('serialize')));

@@ -1,13 +1,40 @@
 <h3>Shifts</h3>
 
+<div class="well">
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+      <tr>
+        <th>
+          <% @employees.each do |employee| %>
+          <dt>
+            <dl><%= employee.name %></dl>
+            <% end %>
+          </dt>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>
+</br>
+
 <div class="row">
   <ul id="schedules">
   <% @schedules.each do |schedule| %>
-  <div class="span1 well">
-    <%= content_tag_for :dt, schedule do %>
-      <%= schedule.shift %>
-    <% end %>
-  </div>
+    <div class="span1 well">
+      <%= content_tag_for :dt, schedule do %>
+        <%= schedule.shift %>
+      <% end %>
+    </div>
   <% end %>
   </ul>
 </div>

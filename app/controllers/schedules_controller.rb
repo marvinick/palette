@@ -3,12 +3,11 @@ class SchedulesController < ApplicationController
 
   def index
     @schedules = Schedule.all
+    @employees = Employee.all
   end
 
   def new
-    @employees = Employee.all
     @schedule = Schedule.new
-    @schedules = Schedule.all
   end
 
   def create

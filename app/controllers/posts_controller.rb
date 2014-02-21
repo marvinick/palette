@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show]
 
   def index
-    @posts = Post.all
     @posts = Post.order("position")
   end
 
@@ -28,6 +27,9 @@ class PostsController < ApplicationController
   end
 
   def sort
+    params[:post].each_with_index do |id, index|
+    Post.update_all({position: index+1}, {id: id})
+  end
     render nothing: true
   end
 
