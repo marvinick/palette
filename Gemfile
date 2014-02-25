@@ -13,6 +13,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails',"~> 2.3.0"
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'acts_as_list'
 
 group :doc do
   gem 'sdoc', require: false
