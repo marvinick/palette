@@ -1,18 +1,34 @@
-<h3>Posts</h3>
+<div class="well">
+  <% @posts.each do |post| %>
+  <center><h3><font color="steelblue"><%= post.title %></font></h3></center>
+  <% end %>
+</div>
 
 <div class="row">
   <ul id="posts" data-update-url="<%= sort_posts_url %>">
+
   <% @posts.each do |post| %>
-  <div class="span2 well">
+  <div class="span1 well">
     <%= content_tag_for :dt, post do %>
-        <h4><%= post.title %></h4>
-        <%= post.description %>
+        <h4><font color="steelblue"><%= post.day %></font></h4>
+        <h5><font color="turquoise"><%= post.shift %></font></h5>
+        <h6><%= post.chef1 %></h6>
+        <h6><%= post.chef2 %></h6>
+        <h6><%= post.chef3 %></h6>
+        <h6><%= post.chef4 %></h6>
+        <h6><%= post.chef5 %></h6>
+        <h5><font color="turquoise"><%= post.shift2 %></font></h5>
+        <h6><%= post.chef6 %></h6>
+        <h6><%= post.chef7 %></h6>
+        <h6><%= post.chef8 %></h6>
+        <h6><%= post.chef9 %></h6>
+        <h6><%= post.chef10 %></h6>
         <br/>
-        <small>Created at <%= post.created_at %></small>
+        <small><h6><%= post.description %><h6></small>
         <br/>
-        <%= link_to "Show", employee_path(@employee) %>
+        <%= link_to "Edit", edit_post_path(post) %>
     <% end %>
-      </div>
+  </div>
   <% end %>
   </ul>
 </div>

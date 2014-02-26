@@ -29,15 +29,14 @@ class EmployeesController < ApplicationController
   def update
      if @employee.update(employee_params)
       flash[:notice] = "This one has been updated"
-      redirect_to employee_path(@employee)
+      redirect_to employees_path(@employees)
     else
       render :edit
     end
   end
 
   def destroy
-    @employee = nil
-    redirect_to employees_path
+    @product.delete
   end
 
   private

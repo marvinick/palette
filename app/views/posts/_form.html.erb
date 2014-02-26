@@ -1,14 +1,67 @@
 <div class='well'>
   <%= form_for @post do |f| %>
-
-    <div class='control-group'>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
-    <div class='control-group'>
+    <tr>
+      <div class='control-group'>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :day %>
+        <%= f.text_field :day %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :shift %>
+        <%= f.text_field :shift %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef1 %>
+        <%= f.text_field :chef1 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef2 %>
+        <%= f.text_field :chef2 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef3 %>
+        <%= f.text_field :chef3 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef4 %>
+        <%= f.text_field :chef4 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef5 %>
+        <%= f.text_field :chef5 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :shift2 %>
+        <%= f.text_field :shift2 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef6 %>
+        <%= f.text_field :chef6 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef7 %>
+        <%= f.text_field :chef7 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef8 %>
+        <%= f.text_field :chef8 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef9 %>
+        <%= f.text_field :chef9 %>
+      </div>
+      <div class='control-group'>
+        <%= f.label :chef10 %>
+        <%= f.text_field :chef10 %>
+      </div>
+      <div class='control-group'>
       <%= f.label :description %>
       <%= f.text_area :description, rows: 8 %>
     </div>
-    <%= f.submit @post.new_record? ? "Create Post" : "Update", class: 'btn btn-success' %>
+    </tr>
+    <%= f.submit @post.new_record? ? "Create Shift" : "Update Shift", class: 'btn btn-success' %>
   <% end %>
 </div>

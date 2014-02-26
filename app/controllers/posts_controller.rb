@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:edit, :update, :show]
+  before_action :set_post, only: [:update, :show]
 
   def index
     @posts = Post.order("position")
@@ -20,10 +20,25 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def edit
+    @post = Post.find(params[:id])
   end
 
   def update
+    if @post.update(post_params)
+      flash[:notice] = "The schedule was updated"
+      redirect_to posts_path(@post)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @product.destroy
   end
 
   def sort
@@ -36,7 +51,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description)
+    params.require(:post).permit(:day, :shift, :shift2, :chef1, :chef2, :chef3, :chef4, :chef5, :chef6, :chef7, :chef8, :chef9, :chef10, :title, :description)
   end
 
   def set_post
