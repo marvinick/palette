@@ -14758,3 +14758,1241 @@ Processing by PostsController#index as HTML
   Rendered layouts/_navigation.html.erb (0.3ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-02-26 22:21:24 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (11.7ms)
+  Rendered posts/new.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-26 22:21:26 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 10:28:23 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (65.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 264ms (Views: 217.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 10:31:32 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-02-27 10:31:34 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2014-02-27 10:31:40 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-02-27 10:32:21 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 10:32:25 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (No route matches {:controller=>"posts", :action=>"edit"} missing required keys: [:id]):
+    10:   <% @posts.each do |post| %>
+    11:   <div class="span1 well">
+    12:     <%= content_tag_for :dt, post do %>
+    13:         <h4><font color="steelblue"><%= link_to post.day, edit_post_path %></font></h4>
+    14:         <h5><font color="turquoise"><%= post.shift %></font></h5>
+    15:         <h6><%= post.chef1 %></h6>
+    16:         <h6><%= post.chef2 %></h6>
+  app/views/posts/index.html.erb:13:in `block (2 levels) in _app_views_posts_index_html_erb___2720312710171939327_70356644470380'
+  app/views/posts/index.html.erb:12:in `block in _app_views_posts_index_html_erb___2720312710171939327_70356644470380'
+  app/views/posts/index.html.erb:10:in `_app_views_posts_index_html_erb___2720312710171939327_70356644470380'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 10:32:39 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-02-27 10:32:40 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/_form.html.erb (32.6ms)
+  Rendered posts/edit.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2014-02-27 10:32:46 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered posts/_form.html.erb (11.5ms)
+  Rendered posts/edit.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 10:33:04 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2014-02-27 10:33:17 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered posts/_form.html.erb (10.5ms)
+  Rendered posts/edit.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 10:33:51 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2014-02-27 10:34:30 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered posts/_form.html.erb (9.9ms)
+  Rendered posts/edit.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 10:36:38 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (44.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts/sort" for 127.0.0.1 at 2014-02-27 10:36:41 -0600
+Processing by PostsController#sort as */*
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `each_with_index' for nil:NilClass):
+  app/controllers/posts_controller.rb:45:in `sort'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.2ms)
+
+
+Started POST "/posts/sort" for 127.0.0.1 at 2014-02-27 10:36:44 -0600
+Processing by PostsController#sort as */*
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `each_with_index' for nil:NilClass):
+  app/controllers/posts_controller.rb:45:in `sort'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.9ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2014-02-27 10:36:49 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered posts/_form.html.erb (9.8ms)
+  Rendered posts/edit.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:37:46 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 29.7ms | ActiveRecord: 0.7ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = 1
+  [1m[36mEmployee Load (7.8ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSQL (3.9ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = 2
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mSQL (4.5ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = 3
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (4.0ms)[0m  [1mDELETE FROM "employees" WHERE "employees"."id" = 5[0m
+  [1m[35mEmployee Load (0.6ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 7]]
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:40:50 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/6" for 127.0.0.1 at 2014-02-27 10:40:52 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered employees/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/6/edit" for 127.0.0.1 at 2014-02-27 10:40:54 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered employees/_form.html.erb (4.7ms)
+  Rendered employees/edit.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/employees/6" for 127.0.0.1 at 2014-02-27 10:41:29 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Matt ", "title"=>"Sushi Chef ", "description"=>"3 years sushi experience "}, "commit"=>"Update", "id"=>"6"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.7ms)[0m  UPDATE "employees" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "employees"."id" = 6  [["title", "Sushi Chef "], ["description", "3 years sushi experience "], ["updated_at", Thu, 27 Feb 2014 16:41:29 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 16ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:41:29 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.5ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees/6" for 127.0.0.1 at 2014-02-27 10:41:31 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered employees/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/4" for 127.0.0.1 at 2014-02-27 10:41:39 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered employees/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/4/edit" for 127.0.0.1 at 2014-02-27 10:41:40 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered employees/_form.html.erb (2.9ms)
+  Rendered employees/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/employees/4" for 127.0.0.1 at 2014-02-27 10:41:57 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Mandy", "title"=>"Head Chef ", "description"=>"18 years sushi exp"}, "commit"=>"Update", "id"=>"4"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "employees" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "employees"."id" = 4  [["title", "Head Chef "], ["description", "18 years sushi exp"], ["updated_at", Thu, 27 Feb 2014 16:41:57 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:41:57 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:41:58 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (3.2ms)
+  Rendered employees/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:42:19 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Marvin", "title"=>"Sushi Chef ", "description"=>"8 years sushi exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:42:19 UTC +00:00], ["description", "8 years sushi exp"], ["name", "Marvin"], ["title", "Sushi Chef "], ["updated_at", Thu, 27 Feb 2014 16:42:19 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:42:19 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:42:21 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (3.4ms)
+  Rendered employees/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:43:47 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Chandler", "title"=>"\"Rookie\"Sushi Chef ", "description"=>"6 months sushi exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:43:47 UTC +00:00], ["description", "6 months sushi exp"], ["name", "Chandler"], ["title", "\"Rookie\"Sushi Chef "], ["updated_at", Thu, 27 Feb 2014 16:43:47 UTC +00:00]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 8ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:43:47 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:43:53 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (3.6ms)
+  Rendered employees/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:44:25 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"John ", "title"=>"\"Rookie\" Sushi Chef ", "description"=>"7 months sushi exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:44:25 UTC +00:00], ["description", "7 months sushi exp"], ["name", "John "], ["title", "\"Rookie\" Sushi Chef "], ["updated_at", Thu, 27 Feb 2014 16:44:25 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 8ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:44:25 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:44:28 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.4ms)
+  Rendered employees/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:45:08 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Shelly Downes ", "title"=>"Sushi Chef ", "description"=>"2 years sushi exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:45:08 UTC +00:00], ["description", "2 years sushi exp"], ["name", "Shelly Downes "], ["title", "Sushi Chef "], ["updated_at", Thu, 27 Feb 2014 16:45:08 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:45:08 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/10" for 127.0.0.1 at 2014-02-27 10:45:12 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered employees/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/10/edit" for 127.0.0.1 at 2014-02-27 10:45:13 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered employees/_form.html.erb (2.6ms)
+  Rendered employees/edit.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/employees/10" for 127.0.0.1 at 2014-02-27 10:45:19 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Shelly Downes ", "title"=>"Sushi Chef ", "description"=>"2 years sushi exp"}, "commit"=>"Update", "id"=>"10"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:45:19 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:45:28 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.4ms)
+  Rendered employees/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:45:32 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-02-27 10:45:33 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (56.0ms)
+  Rendered posts/new.html.erb within layouts/application (57.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:45:34 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:45:37 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.5ms)
+  Rendered employees/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:45:59 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Melissa Shaw ", "title"=>"Sushi Prep", "description"=>"6 months sushi exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:45:59 UTC +00:00], ["description", "6 months sushi exp"], ["name", "Melissa Shaw "], ["title", "Sushi Prep"], ["updated_at", Thu, 27 Feb 2014 16:45:59 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:45:59 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:46:04 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.5ms)
+  Rendered employees/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:46:50 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Luis ", "title"=>"Sushi Prep", "description"=>"3 months sushi exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:46:50 UTC +00:00], ["description", "3 months sushi exp"], ["name", "Luis "], ["title", "Sushi Prep"], ["updated_at", Thu, 27 Feb 2014 16:46:50 UTC +00:00]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:46:50 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:46:54 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.6ms)
+  Rendered employees/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:47:28 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Leo Bandana ", "title"=>"Sushi Chef ", "description"=>"6 years sushi exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:47:28 UTC +00:00], ["description", "6 years sushi exp"], ["name", "Leo Bandana "], ["title", "Sushi Chef "], ["updated_at", Thu, 27 Feb 2014 16:47:28 UTC +00:00]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 7ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:47:28 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/4" for 127.0.0.1 at 2014-02-27 10:47:48 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered employees/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/4/edit" for 127.0.0.1 at 2014-02-27 10:47:49 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered employees/_form.html.erb (2.8ms)
+  Rendered employees/edit.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/employees/4" for 127.0.0.1 at 2014-02-27 10:47:54 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Mandy Parkhurst", "title"=>"Head Chef ", "description"=>"18 years sushi exp"}, "commit"=>"Update", "id"=>"4"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "employees" SET "name" = ?, "updated_at" = ? WHERE "employees"."id" = 4[0m  [["name", "Mandy Parkhurst"], ["updated_at", Thu, 27 Feb 2014 16:47:54 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:47:54 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/6" for 127.0.0.1 at 2014-02-27 10:47:57 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered employees/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/6/edit" for 127.0.0.1 at 2014-02-27 10:47:58 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered employees/_form.html.erb (3.0ms)
+  Rendered employees/edit.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/employees/6" for 127.0.0.1 at 2014-02-27 10:48:02 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Matt  Brackett", "title"=>"Sushi Chef ", "description"=>"3 years sushi experience "}, "commit"=>"Update", "id"=>"6"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "employees" SET "name" = ?, "updated_at" = ? WHERE "employees"."id" = 6  [["name", "Matt  Brackett"], ["updated_at", Thu, 27 Feb 2014 16:48:02 UTC +00:00]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:48:02 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/8" for 127.0.0.1 at 2014-02-27 10:48:04 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  Rendered employees/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/employees/8/edit" for 127.0.0.1 at 2014-02-27 10:48:05 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered employees/_form.html.erb (4.6ms)
+  Rendered employees/edit.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/employees/8" for 127.0.0.1 at 2014-02-27 10:48:08 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Chandler Rueb", "title"=>"\"Rookie\"Sushi Chef ", "description"=>"6 months sushi exp"}, "commit"=>"Update", "id"=>"8"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "employees" SET "name" = ?, "updated_at" = ? WHERE "employees"."id" = 8[0m  [["name", "Chandler Rueb"], ["updated_at", Thu, 27 Feb 2014 16:48:08 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:48:08 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/9" for 127.0.0.1 at 2014-02-27 10:48:10 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "9"]]
+  Rendered employees/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/9/edit" for 127.0.0.1 at 2014-02-27 10:48:11 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  Rendered employees/_form.html.erb (2.9ms)
+  Rendered employees/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/employees/9" for 127.0.0.1 at 2014-02-27 10:48:23 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"John Depot", "title"=>"\"Rookie\" Sushi Chef ", "description"=>"7 months sushi exp\r\n"}, "commit"=>"Update", "id"=>"9"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "employees" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "employees"."id" = 9  [["name", "John Depot"], ["description", "7 months sushi exp\r\n"], ["updated_at", Thu, 27 Feb 2014 16:48:23 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:48:23 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/7" for 127.0.0.1 at 2014-02-27 10:48:25 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered employees/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/7/edit" for 127.0.0.1 at 2014-02-27 10:48:26 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered employees/_form.html.erb (4.1ms)
+  Rendered employees/edit.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/employees/7" for 127.0.0.1 at 2014-02-27 10:48:30 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Marvin Nikijuluw ", "title"=>"Sushi Chef ", "description"=>"8 years sushi exp"}, "commit"=>"Update", "id"=>"7"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "employees" SET "name" = ?, "updated_at" = ? WHERE "employees"."id" = 7[0m  [["name", "Marvin Nikijuluw "], ["updated_at", Thu, 27 Feb 2014 16:48:30 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:48:30 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:48:40 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.9ms)
+  Rendered employees/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:49:15 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Cody ", "title"=>"Head Chef", "description"=>"18 years sushi exp"}, "commit"=>"Add"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 27 Feb 2014 16:49:15 UTC +00:00], ["description", "18 years sushi exp"], ["name", "Cody "], ["title", "Head Chef"], ["updated_at", Thu, 27 Feb 2014 16:49:15 UTC +00:00]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 9ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:49:15 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:49:19 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.5ms)
+  Rendered employees/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:50:06 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Katie Cealka ", "title"=>"Sushi Chef ", "description"=>"10 years sushi exp"}, "commit"=>"Add"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 27 Feb 2014 16:50:06 UTC +00:00], ["description", "10 years sushi exp"], ["name", "Katie Cealka "], ["title", "Sushi Chef "], ["updated_at", Thu, 27 Feb 2014 16:50:06 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 7ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:50:06 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/14" for 127.0.0.1 at 2014-02-27 10:51:49 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered employees/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees/14/edit" for 127.0.0.1 at 2014-02-27 10:51:50 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered employees/_form.html.erb (2.9ms)
+  Rendered employees/edit.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/employees/14" for 127.0.0.1 at 2014-02-27 10:51:54 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Cody Stell ", "title"=>"Head Chef", "description"=>"18 years sushi exp"}, "commit"=>"Update", "id"=>"14"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "employees" SET "name" = ?, "updated_at" = ? WHERE "employees"."id" = 14  [["name", "Cody Stell "], ["updated_at", Thu, 27 Feb 2014 16:51:54 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:51:54 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:51:55 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.5ms)
+  Rendered employees/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:52:15 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Felix Adame", "title"=>"Sushi Chef ", "description"=>"5 years exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:52:15 UTC +00:00], ["description", "5 years exp"], ["name", "Felix Adame"], ["title", "Sushi Chef "], ["updated_at", Thu, 27 Feb 2014 16:52:15 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:52:15 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:52:21 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (3.0ms)
+  Rendered employees/new.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:52:44 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"Ivan Mejia ", "title"=>"\"Rookie\" Sushi Chef ", "description"=>"1 year sushi exp"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 27 Feb 2014 16:52:44 UTC +00:00], ["description", "1 year sushi exp"], ["name", "Ivan Mejia "], ["title", "\"Rookie\" Sushi Chef "], ["updated_at", Thu, 27 Feb 2014 16:52:44 UTC +00:00]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 6ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:52:44 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".description ASC
+  Rendered employees/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:53:09 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-02-27 10:53:46 -0600
+Processing by EmployeesController#new as HTML
+  Rendered employees/_form.html.erb (2.9ms)
+  Rendered employees/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-02-27 10:54:23 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "employee"=>{"name"=>"David ", "title"=>"Sushi Prep ", "description"=>"???"}, "commit"=>"Add"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "employees" ("created_at", "description", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 27 Feb 2014 16:54:23 UTC +00:00], ["description", "???"], ["name", "David "], ["title", "Sushi Prep "], ["updated_at", Thu, 27 Feb 2014 16:54:23 UTC +00:00]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 7ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-02-27 10:54:24 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".description ASC[0m
+  Rendered employees/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-27 10:54:33 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-02-27 10:54:36 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/_form.html.erb (56.4ms)
+  Rendered posts/edit.html.erb within layouts/application (57.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-02-27 10:56:44 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "post"=>{"title"=>"", "day"=>"Monday", "shift"=>"AM", "chef1"=>"Mandy", "chef2"=>"John ", "chef3"=>"Chandler", "chef4"=>"Ivan", "chef5"=>"Luis ", "shift2"=>"PM", "chef6"=>"Chandler ", "chef7"=>"Matt ", "chef8"=>"John", "chef9"=>"Felix ", "chef10"=>"Melissa ", "description"=>"David (training)"}, "commit"=>"Update Shift", "id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "posts" SET "chef10" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = 1  [["chef10", "Melissa "], ["description", "David (training)"], ["updated_at", Thu, 27 Feb 2014 16:56:44 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 1)[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts.1
+Completed 302 Found in 14ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2014-02-27 10:56:44 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2014-02-27 10:57:03 -0600
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/2/edit" for 127.0.0.1 at 2014-02-27 10:57:22 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered posts/_form.html.erb (12.6ms)
+  Rendered posts/edit.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2014-02-27 10:57:35 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "post"=>{"title"=>"", "day"=>"Tuesday", "shift"=>"AM", "chef1"=>"Marvin", "chef2"=>"Mandy ", "chef3"=>"Ivan", "chef4"=>"John", "chef5"=>"Luis ", "shift2"=>"PM", "chef6"=>"Ivan ", "chef7"=>"Mandy ", "chef8"=>"Matt", "chef9"=>"Chandler ", "chef10"=>"Melissa", "description"=>"David (training)"}, "commit"=>"Update Shift", "id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = 2  [["title", ""], ["description", "David (training)"], ["updated_at", Thu, 27 Feb 2014 16:57:35 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 2)[0m
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts.2
+Completed 302 Found in 12ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/posts.2" for 127.0.0.1 at 2014-02-27 10:57:35 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2014-02-27 10:57:45 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered posts/_form.html.erb (10.6ms)
+  Rendered posts/edit.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/3" for 127.0.0.1 at 2014-02-27 10:57:58 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "post"=>{"title"=>"Sushi Bar Schedule 02/23 - 03/01", "day"=>"Wed", "shift"=>"AM", "chef1"=>"John", "chef2"=>"Ivan", "chef3"=>"Marvin", "chef4"=>"Luis ", "chef5"=>"Mandy", "shift2"=>"PM", "chef6"=>"Ivan ", "chef7"=>"Marvin", "chef8"=>"Matt ", "chef9"=>"Felix ", "chef10"=>"Melissa", "description"=>"David (training)"}, "commit"=>"Update Shift", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = 3[0m  [["description", "David (training)"], ["updated_at", Thu, 27 Feb 2014 16:57:58 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 3)
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts.3
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/posts.3" for 127.0.0.1 at 2014-02-27 10:57:58 -0600
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts.3" for 127.0.0.1 at 2014-02-27 10:58:32 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-02-27 10:58:45 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/_form.html.erb (9.9ms)
+  Rendered posts/edit.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-02-27 10:58:51 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "post"=>{"title"=>"", "day"=>"Monday", "shift"=>"AM", "chef1"=>"Mandy", "chef2"=>"John ", "chef3"=>"Chandler", "chef4"=>"Ivan", "chef5"=>"Luis ", "shift2"=>"PM", "chef6"=>"Chandler ", "chef7"=>"Matt ", "chef8"=>"John", "chef9"=>"Felix ", "chef10"=>"Melissa ", "description"=>"David "}, "commit"=>"Update Shift", "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = 1[0m  [["description", "David "], ["updated_at", Thu, 27 Feb 2014 16:58:51 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 1)
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts.1
+Completed 302 Found in 9ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2014-02-27 10:58:51 -0600
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/2/edit" for 127.0.0.1 at 2014-02-27 10:59:01 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered posts/_form.html.erb (13.6ms)
+  Rendered posts/edit.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2014-02-27 10:59:07 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "post"=>{"title"=>"", "day"=>"Tuesday", "shift"=>"AM", "chef1"=>"Marvin", "chef2"=>"Mandy ", "chef3"=>"Ivan", "chef4"=>"John", "chef5"=>"Luis ", "shift2"=>"PM", "chef6"=>"Ivan ", "chef7"=>"Mandy ", "chef8"=>"Matt", "chef9"=>"Chandler ", "chef10"=>"Melissa", "description"=>"David "}, "commit"=>"Update Shift", "id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = 2  [["description", "David "], ["updated_at", Thu, 27 Feb 2014 16:59:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 2)[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts.2
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/posts.2" for 127.0.0.1 at 2014-02-27 10:59:07 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2014-02-27 10:59:09 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered posts/_form.html.erb (11.0ms)
+  Rendered posts/edit.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/3" for 127.0.0.1 at 2014-02-27 10:59:15 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUomog7eHlNK5B9Tlfd4e81RhrxZqUxiDVUDcY3HxpQ=", "post"=>{"title"=>"Sushi Bar Schedule 02/23 - 03/01", "day"=>"Wed", "shift"=>"AM", "chef1"=>"John", "chef2"=>"Ivan", "chef3"=>"Marvin", "chef4"=>"Luis ", "chef5"=>"Mandy", "shift2"=>"PM", "chef6"=>"Ivan ", "chef7"=>"Marvin", "chef8"=>"Matt ", "chef9"=>"Felix ", "chef10"=>"Melissa", "description"=>"David "}, "commit"=>"Update Shift", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = 3[0m  [["description", "David "], ["updated_at", Thu, 27 Feb 2014 16:59:15 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 3)
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts.3
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/posts.3" for 127.0.0.1 at 2014-02-27 10:59:15 -0600
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts.3" for 127.0.0.1 at 2014-02-27 11:12:30 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-02-27 11:12:35 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.6ms)

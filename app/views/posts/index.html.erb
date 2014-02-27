@@ -10,7 +10,7 @@
   <% @posts.each do |post| %>
   <div class="span1 well">
     <%= content_tag_for :dt, post do %>
-        <h4><font color="steelblue"><%= post.day %></font></h4>
+        <h4><font color="steelblue"><%= link_to post.day, edit_post_path(post) %></font></h4>
         <h5><font color="turquoise"><%= post.shift %></font></h5>
         <h6><%= post.chef1 %></h6>
         <h6><%= post.chef2 %></h6>
@@ -23,10 +23,7 @@
         <h6><%= post.chef8 %></h6>
         <h6><%= post.chef9 %></h6>
         <h6><%= post.chef10 %></h6>
-        <br/>
-        <small><h6><%= post.description %><h6></small>
-        <br/>
-        <%= link_to "Edit", edit_post_path(post) %>
+        <h6><font color="red"><%= post.description %></font></h6>
     <% end %>
   </div>
   <% end %>
