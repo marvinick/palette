@@ -22,11 +22,10 @@ end
 group :development do
   gem 'quiet_assets'
   gem 'pry'
-  gem 'sqlite3'
 end
 
 group :production do
   gem 'rails_12factor'
-  gem 'sqlite3'
+  gem 'pg'
 end
 
