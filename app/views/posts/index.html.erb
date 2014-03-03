@@ -13,6 +13,7 @@
   <div class="row">
     <ul id="posts" data-update-url="<%= sort_posts_url %>">
 
+    <div class="rocks">
     <% @posts.each do |post| %>
     <div class="span1 well">
       <%= content_tag_for :dt, post do %>
@@ -33,6 +34,7 @@
       <% end %>
     </div>
     <% end %>
+    </div>
     </ul>
   </div>
 </body>
@@ -42,8 +44,13 @@
 <ol>
   <li>Morning shifts start @ 9.30 am for sushi chef and @ 9 am for prep chef</li>
   <li>Night shifts start @ 4.30 pm for sushi chef and @ 4 for prep chef</li>
+  <li>Saturday shifts, AM starts @ 9 and PM starts @ 3 </li>
   <li>Brunch shift starts @ 9.30 am for sushi chef and @ 8 am for brunch crew</li>
 </p>
+<br/>
+
+<small>Developed by Seasalt Studio</small>
+<br/>
 
 
 
