@@ -3,37 +3,39 @@
   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 
-<div class="well">
-  <% @posts.each do |post| %>
-  <center><h3><font color="steelblue"><%= post.title %></font></h3></center>
-  <% end %>
-</div>
-
-<div class="row">
-  <ul id="posts" data-update-url="<%= sort_posts_url %>">
-
-  <% @posts.each do |post| %>
-  <div class="span1 well">
-    <%= content_tag_for :dt, post do %>
-        <h4><font color="steelblue"><%= link_to post.day, edit_post_path(post) %></font></h4>
-        <h5><font color="turquoise"><%= post.shift %></font></h5>
-        <h6><%= post.chef1 %></h6>
-        <h6><%= post.chef2 %></h6>
-        <h6><%= post.chef3 %></h6>
-        <h6><%= post.chef4 %></h6>
-        <h6><%= post.chef5 %></h6>
-        <h5><font color="turquoise"><%= post.shift2 %></font></h5>
-        <h6><%= post.chef6 %></h6>
-        <h6><%= post.chef7 %></h6>
-        <h6><%= post.chef8 %></h6>
-        <h6><%= post.chef9 %></h6>
-        <h6><%= post.chef10 %></h6>
-        <h6><font color="red"><%= post.description %></font></h6>
+<body>
+  <div class="well">
+    <% @posts.each do |post| %>
+    <center><h3><font color="steelblue"><%= post.title %></font></h3></center>
     <% end %>
   </div>
-  <% end %>
-  </ul>
-</div>
+
+  <div class="row">
+    <ul id="posts" data-update-url="<%= sort_posts_url %>">
+
+    <% @posts.each do |post| %>
+    <div class="span1 well">
+      <%= content_tag_for :dt, post do %>
+          <h4><font color="steelblue"><%= link_to post.day, edit_post_path(post) %></font></h4>
+          <h5><font color="turquoise"><%= post.shift %></font></h5>
+          <h6><%= post.chef1 %></h6>
+          <h6><%= post.chef2 %></h6>
+          <h6><%= post.chef3 %></h6>
+          <h6><%= post.chef4 %></h6>
+          <h6><%= post.chef5 %></h6>
+          <h5><font color="turquoise"><%= post.shift2 %></font></h5>
+          <h6><%= post.chef6 %></h6>
+          <h6><%= post.chef7 %></h6>
+          <h6><%= post.chef8 %></h6>
+          <h6><%= post.chef9 %></h6>
+          <h6><%= post.chef10 %></h6>
+          <h6><font color="red"><%= post.description %></font></h6>
+      <% end %>
+    </div>
+    <% end %>
+    </ul>
+  </div>
+</body>
 
 <p>
   <h4>Notes </h4>

@@ -26,6 +26,12 @@
   padding-left: 0px;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .quiet {
   color: #ababab;
 }
@@ -44,4 +50,8 @@ div.nav_item {
 
 div.comment_votes {
   padding: 10px;
+}
+
+body {
+  padding-top: 55px;
 }
