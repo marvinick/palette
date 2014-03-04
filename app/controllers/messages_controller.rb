@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_message, only: [:edit, :update, :show]
 
   def index
-    @messages = Message.all
+    @messages = Message.order(:updated_at)
   end
 
   def new
@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       flash[:notice] = "You have posted a message"
-      redirect_to messages_path
+      redirect_to posts_path
     else
       render :new
     end

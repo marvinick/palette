@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order("position")
+    @messages = Message.all
   end
 
   def new

@@ -3,9 +3,9 @@
     <tr>
       <div class='control-group'>
         <%= f.label :note %>
-        <%= f.text_field :note %>
+        <%= f.text_area :note, rows: 8 %>
       </div>
 
-    <%= f.submit @message.new_record? ? "Post It" : "Update", class: 'btn btn-success' %>
+    <%= f.submit @message.new_record? ? "Post It" : "Update Note", class: 'btn btn-success' %>
   <% end %>
 </div>

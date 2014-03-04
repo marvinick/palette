@@ -7,4 +7,6 @@ Palette2::Application.routes.draw do
   resources :posts do
     collection { post :sort }
   end
+  resources :messages
+
 end
