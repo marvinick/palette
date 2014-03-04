@@ -1,0 +1,11 @@
+<div class='well'>
+  <%= form_for @message do |f| %>
+    <tr>
+      <div class='control-group'>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+
+    <%= f.submit @message.new_record? ? "Create Shift" : "Update Shift", class: 'btn btn-success' %>
+  <% end %>
+</div>

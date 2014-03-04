@@ -17893,3 +17893,929 @@ ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-re
   /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-02 22:43:27 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (27.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 51.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-03 22:11:18 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (73.1ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 275ms (Views: 228.9ms | ActiveRecord: 1.8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-03 22:11:21 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-03-03 22:11:26 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees" ORDER BY "employees".updated_at ASC
+  Rendered employees/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 39.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-03 22:11:30 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-03 22:11:35 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-03-03 22:11:46 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT "employees".* FROM "employees" ORDER BY "employees".updated_at ASC[0m
+  Rendered employees/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-03 22:11:46 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessage (20140304041313)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar(255)) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140304041313"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "messages" already exists: CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMessage (20140304041313)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "messages"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140304041313'[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddDayToPosts (20140226014108)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TEMPORARY TABLE "aposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "position" integer, "chef1" varchar(255), "chef2" varchar(255), "chef3" varchar(255), "chef4" varchar(255), "chef5" varchar(255), "chef6" varchar(255), "chef7" varchar(255), "chef8" varchar(255), "chef9" varchar(255), "chef10" varchar(255), "shift" varchar(255), "shift2" varchar(255), "day" varchar(255)) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "posts"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "aposts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2","day") VALUES (1, '', 'David ', '2014-02-26 01:10:55.819661', '2014-02-27 16:58:51.547175', 1, 'Mandy', 'John ', 'Chandler', 'Ivan', 'Luis ', 'Chandler ', 'Matt ', 'John', 'Felix ', 'Melissa ', 'AM', 'PM', 'Monday')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aposts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2","day") VALUES (2, '', 'David ', '2014-02-26 01:47:20.065527', '2014-02-27 16:59:07.071089', 2, 'Marvin', 'Mandy ', 'Ivan', 'John', 'Luis ', 'Ivan ', 'Mandy ', 'Matt', 'Chandler ', 'Melissa', 'AM', 'PM', 'Tuesday')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2","day") VALUES (3, 'Sushi Bar Schedule 02/23 - 03/01', 'David ', '2014-02-26 01:49:50.617411', '2014-02-27 16:59:15.547686', 3, 'John', 'Ivan', 'Marvin', 'Luis ', 'Mandy', 'Ivan ', 'Marvin', 'Matt ', 'Felix ', 'Melissa', 'AM', 'PM', 'Wed')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2","day") VALUES (4, NULL, NULL, '2014-02-26 01:52:52.949404', '2014-02-26 01:59:58.018402', 4, 'Mandy', 'Matt ', 'John', 'Luis ', 'Chandler ', 'Marvin', 'Matt ', 'Ivan', 'Shelly', ' Melissa ', 'AM', 'PM', 'Thu')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2","day") VALUES (5, NULL, NULL, '2014-02-26 01:55:15.504971', '2014-02-26 01:55:15.504971', 5, 'Matt ', 'John ', 'Marvin ', 'Shelly', 'Luis ', 'Cody', 'Marvin', 'Leo ', 'Chandler ', 'Luis ', 'AM', 'PM', 'Friday')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aposts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2","day") VALUES (6, '', '', '2014-02-26 01:57:36.525785', '2014-02-26 02:37:32.027718', 6, 'Chandler ', 'Felix ', 'Ivan (brunch prep)', '', '', 'Marvin (@5)', 'Leo ', 'Katie ', 'Matt ', 'Melissa', 'AM', 'PM', 'Sat ')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aposts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2","day") VALUES (7, NULL, NULL, '2014-02-26 01:58:40.385833', '2014-02-26 01:58:40.385833', 7, 'Katie ', 'Marvin ', 'Ivan ', 'Chandler ', '', '', '', '', '', '', 'Brunch', '', 'Sunday')
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "position" integer, "chef1" varchar(255), "chef2" varchar(255), "chef3" varchar(255), "chef4" varchar(255), "chef5" varchar(255), "chef6" varchar(255), "chef7" varchar(255), "chef8" varchar(255), "chef9" varchar(255), "chef10" varchar(255), "shift" varchar(255), "shift2" varchar(255)) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "aposts"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2") VALUES (1, '', 'David ', '2014-02-26 01:10:55.819661', '2014-02-27 16:58:51.547175', 1, 'Mandy', 'John ', 'Chandler', 'Ivan', 'Luis ', 'Chandler ', 'Matt ', 'John', 'Felix ', 'Melissa ', 'AM', 'PM')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2") VALUES (2, '', 'David ', '2014-02-26 01:47:20.065527', '2014-02-27 16:59:07.071089', 2, 'Marvin', 'Mandy ', 'Ivan', 'John', 'Luis ', 'Ivan ', 'Mandy ', 'Matt', 'Chandler ', 'Melissa', 'AM', 'PM')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2") VALUES (3, 'Sushi Bar Schedule 02/23 - 03/01', 'David ', '2014-02-26 01:49:50.617411', '2014-02-27 16:59:15.547686', 3, 'John', 'Ivan', 'Marvin', 'Luis ', 'Mandy', 'Ivan ', 'Marvin', 'Matt ', 'Felix ', 'Melissa', 'AM', 'PM')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "posts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2") VALUES (4, NULL, NULL, '2014-02-26 01:52:52.949404', '2014-02-26 01:59:58.018402', 4, 'Mandy', 'Matt ', 'John', 'Luis ', 'Chandler ', 'Marvin', 'Matt ', 'Ivan', 'Shelly', ' Melissa ', 'AM', 'PM')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2") VALUES (5, NULL, NULL, '2014-02-26 01:55:15.504971', '2014-02-26 01:55:15.504971', 5, 'Matt ', 'John ', 'Marvin ', 'Shelly', 'Luis ', 'Cody', 'Marvin', 'Leo ', 'Chandler ', 'Luis ', 'AM', 'PM')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "posts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2") VALUES (6, '', '', '2014-02-26 01:57:36.525785', '2014-02-26 02:37:32.027718', 6, 'Chandler ', 'Felix ', 'Ivan (brunch prep)', '', '', 'Marvin (@5)', 'Leo ', 'Katie ', 'Matt ', 'Melissa', 'AM', 'PM')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "posts" ("id","title","description","created_at","updated_at","position","chef1","chef2","chef3","chef4","chef5","chef6","chef7","chef8","chef9","chef10","shift","shift2") VALUES (7, NULL, NULL, '2014-02-26 01:58:40.385833', '2014-02-26 01:58:40.385833', 7, 'Katie ', 'Marvin ', 'Ivan ', 'Chandler ', '', '', '', '', '', '', 'Brunch', '')
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "aposts"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140226014108'
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDayToPosts (20140226014108)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.2ms)[0m  [1mALTER TABLE "posts" ADD "day" varchar(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140226014108"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMessage (20140304041313)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar(255)) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140304041313"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "messages" already exists: CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "messages" already exists: CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "messages" already exists: CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "messages" already exists: CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "messages" already exists: CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "messages" already exists: CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "messages" already exists: CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-03 22:26:14 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2171575171329869105__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+  [1m[36m (2.3ms)[0m  [1mDROP TABLE "messages"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "message"
+SQLite3::SQLException: no such table: message: DROP TABLE "message"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140304041418"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to DropMessage (20140304042104)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropMessage (20140304042104)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "message"[0m
+SQLite3::SQLException: no such table: message: DROP TABLE "message"
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMessages (20140304041418)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "messages"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140304041418'[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMessages (20140304041418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sayit" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140304041418"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Migrating to DropMessage (20140304042104)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "message"[0m
+SQLite3::SQLException: no such table: message: DROP TABLE "message"
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropMessage (20140304042104)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "message"[0m
+SQLite3::SQLException: no such table: message: DROP TABLE "message"
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "message"[0m
+SQLite3::SQLException: no such table: message: DROP TABLE "message"
+  [1m[35m (5.2ms)[0m  DROP TABLE "messages"
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-03 22:35:40 -0600
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2171575171329869105__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropMessage (20140304042104)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "message"[0m
+SQLite3::SQLException: no such table: message: DROP TABLE "message"
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropMessage (20140304042104)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140304042104"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to DropMessages (20140304042136)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140304042136"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMessage (20140304043056)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140304043056"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-03 22:40:34 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (100.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 122ms (Views: 115.0ms | ActiveRecord: 1.1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2014-03-03 22:40:41 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/_form.html.erb (28.0ms)
+  Rendered posts/edit.html.erb within layouts/application (30.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-03-03 22:40:47 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4vtdxbxusbhuAX/laNIr4B+92x5BRmXxFZhkUOMQ6E=", "post"=>{"title"=>"", "day"=>"Monday", "shift"=>"AM", "chef1"=>"Mandy", "chef2"=>"John ", "chef3"=>"Chandler", "chef4"=>"Ivan", "chef5"=>"Luis ", "shift2"=>"PM", "chef6"=>"Chandler ", "chef7"=>"Matt ", "chef8"=>"John", "chef9"=>"Felix ", "chef10"=>"Melissa ", "description"=>"David "}, "commit"=>"Update Shift", "id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  UPDATE "posts" SET "day" = ?, "updated_at" = ? WHERE "posts"."id" = 1  [["day", "Monday"], ["updated_at", Tue, 04 Mar 2014 04:40:47 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 1)[0m
+  [1m[35m (3.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts.1
+Completed 302 Found in 24ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/posts.1" for 127.0.0.1 at 2014-03-03 22:40:47 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (46.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 79ms (Views: 68.7ms | ActiveRecord: 0.6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/posts/2/edit" for 127.0.0.1 at 2014-03-03 22:40:52 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered posts/_form.html.erb (12.5ms)
+  Rendered posts/edit.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/2" for 127.0.0.1 at 2014-03-03 22:40:58 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4vtdxbxusbhuAX/laNIr4B+92x5BRmXxFZhkUOMQ6E=", "post"=>{"title"=>"", "day"=>"Tuesday", "shift"=>"AM", "chef1"=>"Marvin", "chef2"=>"Mandy ", "chef3"=>"Ivan", "chef4"=>"John", "chef5"=>"Luis ", "shift2"=>"PM", "chef6"=>"Ivan ", "chef7"=>"Mandy ", "chef8"=>"Matt", "chef9"=>"Chandler ", "chef10"=>"Melissa", "description"=>"David "}, "commit"=>"Update Shift", "id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "day" = ?, "updated_at" = ? WHERE "posts"."id" = 2[0m  [["day", "Tuesday"], ["updated_at", Tue, 04 Mar 2014 04:40:58 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 2)
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts.2
+Completed 302 Found in 13ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/posts.2" for 127.0.0.1 at 2014-03-03 22:40:58 -0600
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2014-03-03 22:41:00 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered posts/_form.html.erb (14.1ms)
+  Rendered posts/edit.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/3" for 127.0.0.1 at 2014-03-03 22:41:04 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4vtdxbxusbhuAX/laNIr4B+92x5BRmXxFZhkUOMQ6E=", "post"=>{"title"=>"Sushi Bar Schedule 02/23 - 03/01", "day"=>"Wed", "shift"=>"AM", "chef1"=>"John", "chef2"=>"Ivan", "chef3"=>"Marvin", "chef4"=>"Luis ", "chef5"=>"Mandy", "shift2"=>"PM", "chef6"=>"Ivan ", "chef7"=>"Marvin", "chef8"=>"Matt ", "chef9"=>"Felix ", "chef10"=>"Melissa", "description"=>"David "}, "commit"=>"Update Shift", "id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "posts" SET "day" = ?, "updated_at" = ? WHERE "posts"."id" = 3  [["day", "Wed"], ["updated_at", Tue, 04 Mar 2014 04:41:04 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 3)[0m
+  [1m[35m (4.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts.3
+Completed 302 Found in 15ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/posts.3" for 127.0.0.1 at 2014-03-03 22:41:04 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2014-03-03 22:41:06 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered posts/_form.html.erb (11.7ms)
+  Rendered posts/edit.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/4" for 127.0.0.1 at 2014-03-03 22:41:15 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4vtdxbxusbhuAX/laNIr4B+92x5BRmXxFZhkUOMQ6E=", "post"=>{"title"=>"", "day"=>"Thu", "shift"=>"AM", "chef1"=>"Mandy", "chef2"=>"Matt ", "chef3"=>"John", "chef4"=>"Luis ", "chef5"=>"Chandler ", "shift2"=>"PM", "chef6"=>"Marvin", "chef7"=>"Matt ", "chef8"=>"Ivan", "chef9"=>"Shelly", "chef10"=>" Melissa ", "description"=>""}, "commit"=>"Update Shift", "id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "day" = ?, "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = 4[0m  [["day", "Thu"], ["title", ""], ["description", ""], ["updated_at", Tue, 04 Mar 2014 04:41:15 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 4)
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts.4
+Completed 302 Found in 11ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/posts.4" for 127.0.0.1 at 2014-03-03 22:41:15 -0600
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/posts/5/edit" for 127.0.0.1 at 2014-03-03 22:41:16 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered posts/_form.html.erb (13.6ms)
+  Rendered posts/edit.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/5" for 127.0.0.1 at 2014-03-03 22:41:28 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4vtdxbxusbhuAX/laNIr4B+92x5BRmXxFZhkUOMQ6E=", "post"=>{"title"=>"", "day"=>"Friday", "shift"=>"AM", "chef1"=>"Matt ", "chef2"=>"John ", "chef3"=>"Marvin ", "chef4"=>"Shelly", "chef5"=>"Luis ", "shift2"=>"PM", "chef6"=>"Cody", "chef7"=>"Marvin", "chef8"=>"Leo ", "chef9"=>"Chandler ", "chef10"=>"Luis ", "description"=>""}, "commit"=>"Update Shift", "id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "posts" SET "day" = ?, "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = 5  [["day", "Friday"], ["title", ""], ["description", ""], ["updated_at", Tue, 04 Mar 2014 04:41:28 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 5)[0m
+  [1m[35m (4.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts.5
+Completed 302 Found in 12ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/posts.5" for 127.0.0.1 at 2014-03-03 22:41:28 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2014-03-03 22:41:29 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered posts/_form.html.erb (10.4ms)
+  Rendered posts/edit.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/6" for 127.0.0.1 at 2014-03-03 22:41:42 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4vtdxbxusbhuAX/laNIr4B+92x5BRmXxFZhkUOMQ6E=", "post"=>{"title"=>"", "day"=>"Sat ", "shift"=>"AM", "chef1"=>"Chandler ", "chef2"=>"Felix ", "chef3"=>"Ivan (brunch prep)", "chef4"=>"", "chef5"=>"", "shift2"=>"PM", "chef6"=>"Marvin (@5)", "chef7"=>"Leo ", "chef8"=>"Katie ", "chef9"=>"Matt ", "chef10"=>"Melissa", "description"=>""}, "commit"=>"Update Shift", "id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "posts" SET "day" = ?, "updated_at" = ? WHERE "posts"."id" = 6[0m  [["day", "Sat "], ["updated_at", Tue, 04 Mar 2014 04:41:42 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 6)
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts.6
+Completed 302 Found in 13ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/posts.6" for 127.0.0.1 at 2014-03-03 22:41:42 -0600
+Processing by PostsController#index as 
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" ORDER BY position
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 70ms (Views: 21.6ms | ActiveRecord: 0.6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2014-03-03 22:41:43 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered posts/_form.html.erb (14.3ms)
+  Rendered posts/edit.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/7" for 127.0.0.1 at 2014-03-03 22:41:48 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4vtdxbxusbhuAX/laNIr4B+92x5BRmXxFZhkUOMQ6E=", "post"=>{"title"=>"", "day"=>"Sunday", "shift"=>"Brunch", "chef1"=>"Katie ", "chef2"=>"Marvin ", "chef3"=>"Ivan ", "chef4"=>"Chandler ", "chef5"=>"", "shift2"=>"", "chef6"=>"", "chef7"=>"", "chef8"=>"", "chef9"=>"", "chef10"=>"", "description"=>""}, "commit"=>"Update Shift", "id"=>"7"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "posts" SET "day" = ?, "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = 7  [["day", "Sunday"], ["title", ""], ["description", ""], ["updated_at", Tue, 04 Mar 2014 04:41:48 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE (1 = 1 AND position = 7)[0m
+  [1m[35m (17.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts.7
+Completed 302 Found in 25ms (ActiveRecord: 18.5ms)
+
+
+Started GET "/posts.7" for 127.0.0.1 at 2014-03-03 22:41:48 -0600
+Processing by PostsController#index as 
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY position[0m
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/css/bootstrap-responsive.css"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNoteToMessages (20140304044319)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNoteToMessages (20140304044319)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNoteToMessages (20140304044319)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "messages" ADD "note" varchar(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140304044319"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
