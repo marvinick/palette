@@ -17,7 +17,9 @@
     <% @posts.each do |post| %>
     <div class="span1 well">
       <%= content_tag_for :dt, post do %>
+        <% if logged_in? %>
           <h4><font color="steelblue"><%= link_to post.day, edit_post_path(post) %></font></h4>
+        <% end %>
           <h5><font color="turquoise"><%= post.shift %></font></h5>
           <h6><%= post.chef1 %></h6>
           <h6><%= post.chef2 %></h6>

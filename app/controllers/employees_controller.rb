@@ -15,7 +15,7 @@ class EmployeesController < ApplicationController
     if @employee.save
       session[:employee_id] = @employee.id
       flash[:notice] = "You are registered"
-      redirect_to employees_path
+      redirect_to root_path
     else
       render :new
     end
