@@ -1,1 +1,3 @@
-<%= render 'form' %>
+<% if logged_in? %>
+  <%= render 'form' %>
+<% end %>

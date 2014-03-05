@@ -13,7 +13,8 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
 
     if @employee.save
-      flash[:notice] = "You have added a new employee"
+      session[:employee_id] = @employee.id
+      flash[:notice] = "You are registered"
       redirect_to employees_path
     else
       render :new
@@ -29,20 +30,17 @@ class EmployeesController < ApplicationController
   def update
      if @employee.update(employee_params)
       flash[:notice] = "This one has been updated"
-      redirect_to employees_path(@employees)
+      redirect_to posts_path(@posts)
     else
       render :edit
     end
   end
 
-  def destroy
-    @product.delete
-  end
 
   private
 
   def employee_params
-    params.require(:employee).permit(:name, :title, :description)
+    params.require(:employee).permit(:name, :password)
   end
 
   def set_employee
