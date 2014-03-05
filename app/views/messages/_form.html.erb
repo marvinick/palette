@@ -1,14 +1,16 @@
 <body>
-  <h4>Leave your name and message here</h4>
-  <div class='well'>
-    <%= form_for @message do |f| %>
-      <tr>
-        <div class='control-group'>
-          <%= f.label :note %>
-          <%= f.text_area :note, rows: 8 %>
-        </div>
+  <div class="well">
+    <h4>Leave your name and message here</h4>
+    <div class='well'>
+      <%= form_for @message do |f| %>
+        <tr>
+          <div class='control-group'>
+            <%= f.label :note %>
+            <%= f.text_area :note, rows: 8 %>
+          </div>
 
-      <%= f.submit @message.new_record? ? "Post It" : "Update Note", class: 'btn btn-success' %>
-    <% end %>
+        <%= f.submit @message.new_record? ? "Post It" : "Update Note", class: 'btn btn-success' %>
+      <% end %>
+    </div>
   </div>
 </body>
