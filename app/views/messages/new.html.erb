@@ -1,11 +1,13 @@
-<div class='well'>
-  <%= form_for @message do |f| %>
-    <tr>
-      <div class='control-group'>
-        <%= f.label :note %>
-        <%= f.text_area :note, rows: 8 %>
-      </div>
+<body>
+  <div class='well'>
+    <%= form_for @message do |f| %>
+      <tr>
+        <div class='control-group'>
+          <%= f.label :note %>
+          <%= f.text_area :note, rows: 8 %>
+        </div>
 
-    <%= f.submit @message.new_record? ? "Post It" : "Update Note", class: 'btn btn-success' %>
-  <% end %>
-</div>
+      <%= f.submit @message.new_record? ? "Post It" : "Update Note", class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</body>
