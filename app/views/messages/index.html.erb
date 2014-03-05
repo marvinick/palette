@@ -4,5 +4,7 @@
   <% @messages.each do |message| %>
     <%= message.note %>
   <% end %>
+  <br/>
+  <%= link_to "Edit", edit_message_path %>
 </div>
 

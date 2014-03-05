@@ -37,7 +37,7 @@
     </div>
     </ul>
   </div>
-</body>
+
 
 
 <h4>Notes </h4>
@@ -54,15 +54,22 @@
 
 <% @messages.each do |message| %>
   <div class="well">
+
     <%= message.note %>
     <br/>
+    <% if logged_in? %>
+      <small><%= link_to "Edit", edit_message_path(message) %></small>
+    <% end %>
+    <br/>
     <small>Posted on <%= message.created_at %></small>
-</div>
-<% end %>
+
+  </div>
+  <% end %>
 
 </br>
 
-<small>Developed by Seasalt Studio</small>
+<bold><center><small>Developed by Seasalt Studio 2014</small></center></bold>
+</body>
 
 
 

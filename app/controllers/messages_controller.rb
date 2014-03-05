@@ -27,9 +27,9 @@ class MessagesController < ApplicationController
   end
 
   def update
-    if @message.update
+    if @message.update(message_params)
       flash[:notice] = "You have updated your message"
-      redirect_to messages_path(@messages)
+      redirect_to posts_path(@posts)
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:note)
+    params.require(:message).permit(:note, :created_at, :updated_at)
   end
 
   def set_message
