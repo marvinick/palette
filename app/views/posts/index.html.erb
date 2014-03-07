@@ -32,7 +32,7 @@
           <h6><%= post.chef10 %></h6>
           <h6><font color="red"><%= post.description %></font></h6>
           <% if logged_in? %>
-            <%= link_to "Edit", edit_post_path(post) %>
+            <h6><%= link_to "Edit", edit_post_path(post) %></h6>
           <% end %>
       <% end %>
     </div>
@@ -50,7 +50,7 @@
   <li>Night shifts start @ 4.30 pm for sushi chef and @ 4 for prep chef</li>
   <li>Saturday shifts, AM starts @ 9 and PM starts @ 3 </li>
   <li>Brunch shift starts @ 9.30 am for sushi chef and @ 8 am for brunch crew</li>
-  <li>Anything other than ordinary, will be presented in red. They could be training new employee, holidays etc</li>
+  <li>Anything other than ordinary, will be presented in red. They could be new employee trainings, holidays etc</li>
 </div
 <br/>
 
