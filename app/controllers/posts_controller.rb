@@ -38,9 +38,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy
-    @product.destroy
-  end
 
   def sort
     params[:post].each_with_index do |id, index|

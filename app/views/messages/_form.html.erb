@@ -4,9 +4,14 @@
     <%= form_for @message do |f| %>
       <tr>
         <div class='control-group'>
+          <%= f.label :user %>
+          <%= f.text_field :user%>
+        </div>
+        <div class='control-group'>
           <%= f.label :note %>
           <%= f.text_area :note, rows: 8 %>
         </div>
+
           <%= f.submit @message.new_record? ? "Post It" : "Update Note", class: 'btn btn-success' %>
     <% end %>
     </div>

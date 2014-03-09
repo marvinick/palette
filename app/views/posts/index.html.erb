@@ -42,11 +42,12 @@
   </div>
 
 
-<h4>Messages</h4>
+<h4>Messages / Requests</h4>
 
 <% @messages.each do |message| %>
   <div class="well">
-
+    <font color="olive"><%= message.user %></font>
+    <br/>
     <%= message.note %>
     <br/>
     <% if logged_in? %>

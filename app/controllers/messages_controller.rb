@@ -40,7 +40,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:note, :created_at, :updated_at)
+    params.require(:message).permit(:note, :user, :created_at, :updated_at)
   end
 
   def set_message
