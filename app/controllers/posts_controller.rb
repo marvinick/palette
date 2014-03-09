@@ -52,7 +52,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:day, :shift, :shift2, :chef1, :chef2, :chef3, :chef4, :chef5, :chef6, :chef7, :chef8, :chef9, :chef10, :title, :description)
+    params.require(:post).permit(:day, :shift, :shift2, :chef1, :chef2, :chef3, :chef4, :chef5, :chef6, :chef7, :chef8, :chef9, :chef10, :title, :description, :scribble)
   end
 
   def set_post

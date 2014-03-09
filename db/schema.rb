@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304213415) do
+ActiveRecord::Schema.define(version: 20140307194719) do
 
   create_table "employees", force: true do |t|
     t.string   "name"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140304213415) do
     t.string   "shift"
     t.string   "shift2"
     t.string   "day"
+    t.string   "scribble"
   end
 
   create_table "schedules", force: true do |t|
