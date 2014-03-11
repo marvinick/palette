@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_message, only: [:edit, :update, :show]
 
   def index
-    @messages = Message.order(:created_at)
+    @messages = Message.order(:updated_at).reverse
   end
 
   def new
