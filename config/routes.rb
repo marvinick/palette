@@ -8,10 +8,10 @@ Palette2::Application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   resources :employees
-  resources :schedules
   resources :posts do
     collection { post :sort }
   end
   resources :messages
+  resources :recipes
 
 end
