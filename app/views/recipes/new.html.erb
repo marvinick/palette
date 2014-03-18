@@ -1,0 +1,16 @@
+<body>
+  <div class="well">
+    <h4>Write your recipe:</h4>
+    <%= form_for @recipe do |f| %>
+      <tr>
+        <div class='control-group'>
+          <%= f.label :recipe %>
+          <%= f.text_area :recipe, rows: 8 %>
+        </div>
+
+
+          <%= f.submit @recipe.new_record? ? "Post It" : "Update Note", class: 'btn btn-success' %>
+    <% end %>
+    </div>
+  </div>
+</body>
